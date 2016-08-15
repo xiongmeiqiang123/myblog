@@ -7,3 +7,11 @@ router.get('/', function(req, res, next) {
 });
 
 module.exports = router;
+
+
+if(data && data.status === 'Failed') {
+	msg.alert(data.data);
+	return ;
+}
+
+msg.alert('网络发生错误');
